@@ -13,7 +13,31 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+import os
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'z+%=$f$8rtt5l2yg)&5z^p^gle__6+=q%g&il@(88d5b6fyg+4'
+
+
 DJANGO_APPS = [ "d3_test" ]
 REQUIRES_HADOOP = False
 MENU_INDEX = 100
 ICON = "d3_test/art/icon_d3_test_48.png"
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+ROOT_URLCONF = 'd3_test.urls'
