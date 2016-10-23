@@ -15,15 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from django.conf.urls import patterns, url
+from desktop.lib.django_util import render
+import datetime
 
-urlpatterns = patterns('d3_test',
-  url(r'^$', 'views.index'),
-
-)
-
-urlpatterns += patterns('d3_test.api',
-  url(r'^api/table/(?P<database>\w+)/(?P<table>\w+)/(?P<limit>\d+)/?$', 'get_data', name='get_data'),
- )
-
-
+def index(request):
+  return render('index.mako', request, dict(date=datetime.datetime.now()))

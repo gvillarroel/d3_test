@@ -19,11 +19,4 @@ from django.conf.urls import patterns, url
 
 urlpatterns = patterns('d3_test',
   url(r'^$', 'views.index'),
-
 )
-
-urlpatterns += patterns('d3_test.api',
-  url(r'^api/table/(?P<database>\w+)/(?P<table>\w+)/(?P<limit>\d+)/?$', 'get_data', name='get_data'),
- )
-
-

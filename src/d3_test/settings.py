@@ -41,3 +41,5 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 ROOT_URLCONF = 'd3_test.urls'
+
+TEMPLATE_DIRS = ('/home/gjv1/dev/d3_test/src/d3_test/templates/')

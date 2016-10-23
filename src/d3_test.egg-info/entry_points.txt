@@ -1,0 +1,3 @@
+[desktop.sdk.application]
+d3_test=d3_test
+

@@ -14,3 +14,8 @@ python setup.py install
 install desktop/core (hue)
 
 install pysignal
+
+
+huePython  manage.py runserver --noreload --nothreading
+
+[gjv1@alienware ext-py]$ for folder in $(ls); do sudo python $folder/setup.py install; done
